@@ -69,8 +69,15 @@ atende gera achado falso; omitir um que ele atende deixa passar bug real.
 
 **Verificar:** `min-width: 0` nos filhos de flex/grid; wrap, truncate ou scroll **intencional** para
 e-mail, domínio, protocolo, JSON, comando, nome longo, chip e botão; layout multi-coluna colapsando
-estruturalmente no ponto declarado; dropdown fora de contexto com overflow clipado (ou
-`fixed`/portal/nativo).
+estruturalmente no **ponto de colapso declarado** — `{{texto:pontoDeColapso}}`; dropdown fora de
+contexto com overflow clipado (ou `fixed`/portal/nativo).
+
+**Sem ponto de colapso declarado, a lente não se cala: cobra colapso abaixo de tablet
+(`max-width: 768px`) e diz no parecer que usou o padrão.** Fatia vazia autoriza declarar a ausência;
+nunca autoriza abandonar a verificação. Medido em 2026-08-17: com o critério escrito como *"no ponto
+declarado"* e nenhum ponto declarado no adaptador, o inspetor deixou passar um cabeçalho de duas
+colunas que não colapsa nem no menor viewport suportado — a régua que trazia o critério concreto pegou
+o mesmo defeito. **Critério sem valor não é critério.**
 
 **Overflow de valor operacional é bug de design, não detalhe.**
 
@@ -89,6 +96,16 @@ outline nativo; se a régua nomeia um anel de foco, é ele) · todo controle alc
 teclado · rótulo acessível ou semântica nativa onde o elemento não é autoexplicativo · status
 **nunca** só por cor (ícone, texto ou forma junto) · movimento curto, guiado por estado, respeitando
 `prefers-reduced-motion` · alvos dimensionados para uso repetido.
+
+**"Status só por cor" tem exemplo literal, e ele é P0.** Um badge, ponto, bolinha, barra ou célula
+**sem texto e sem rótulo acessível**, distinguido apenas pela cor de fundo, **é** status só por cor.
+Isso é **P0** — não é P1 de "rótulo acessível ausente". A pergunta que decide: *se a cor for removida,
+sobra alguma informação?* Se não sobra, é P0.
+
+> Medido em 2026-08-17: sem esse exemplo escrito, **dois inspetores independentes** acharam os dois
+> badges vazios coloridos e classificaram os dois como P1 de rótulo ausente. As duas réguas já
+> mandavam P0 para "status nunca só por cor" — e as duas foram rebaixadas na aplicação. Regra sem
+> exemplo é regra que se aplica errado.
 
 **P0:** foco removido sem substituto, controle inalcançável por teclado, status só por cor.
 **P1:** contraste abaixo de AA, rótulo acessível ausente onde a semântica não basta. **P2:** alvo

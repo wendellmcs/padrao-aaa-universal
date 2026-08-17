@@ -85,6 +85,7 @@ pela primeira vez:
 | `{{texto:artefatoDeReferencia}}` | a peça de melhor acabamento já aprovada |
 | `{{texto:rotulosCanonicos}}` | nomes do produto que não se alteram |
 | `{{texto:viewports}}` | as larguras que o produto atende de verdade |
+| `{{texto:pontoDeColapso}}` | a largura em que o layout multi-coluna **tem** de colapsar |
 | `{{texto:antiReferencias}}` | o que este produto **não** pode parecer |
 | `{{texto:guardaCorposDoProjeto}}` | guarda-corpos que só valem aqui, inclusive os que invertem os desta skill |
 | `{{texto:sobreBloqueioAceito}}` | o falso positivo que o dono prefere a um falso negativo |
