@@ -107,9 +107,21 @@ sobra alguma informação?* Se não sobra, é P0.
 > mandavam P0 para "status nunca só por cor" — e as duas foram rebaixadas na aplicação. Regra sem
 > exemplo é regra que se aplica errado.
 
+**"Seleção só por classe" também é achado, e a pergunta que decide é a mesma.** Aba, chip, item de
+lista ou botão de segmento cujo estado *selecionado* existe apenas como classe de estilo (`.active`,
+`.selected`), sem nada que exponha esse estado à camada de acessibilidade, **é P1** — quem usa leitor
+de tela ouve o item selecionado exatamente igual aos outros. Vira **P0** quando, tirando a cor, nada
+distingue o selecionado do não selecionado. **Não vale** quando o controle nativo já carrega o
+estado; aí exigir atributo extra é falso positivo.
+
+> Medido em 2026-08-17: num projeto real, a aba ativa de um modal marcava seleção só pela classe
+> `active`, e o estilo dessa classe mudava apenas fundo, cor e borda. **14 inspetores cegos**
+> passaram por essa aba e nenhum abriu achado — nenhuma das duas réguas medidas nomeava o caso.
+> Seleção é o estado mais comum de toda interface de abas, e era o único que a lente não citava.
+
 **P0:** foco removido sem substituto, controle inalcançável por teclado, status só por cor.
-**P1:** contraste abaixo de AA, rótulo acessível ausente onde a semântica não basta. **P2:** alvo
-pequeno mas utilizável.
+**P1:** contraste abaixo de AA, rótulo acessível ausente onde a semântica não basta, estado de
+seleção só em classe de estilo. **P2:** alvo pequeno mas utilizável.
 
 ---
 
