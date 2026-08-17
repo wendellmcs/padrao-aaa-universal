@@ -1,0 +1,4 @@
+# Normaliza tudo em LF no repositorio, independente do sistema de quem clona.
+# Evita marca de Windows no historico publico e a divergencia de indice que o
+# core.autocrlf produz (arquivo aparece modificado com diff vazio).
+* text=auto eol=lf

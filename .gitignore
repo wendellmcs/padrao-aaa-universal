@@ -1,0 +1,13 @@
+# Nada de contexto local, plano ou ledger neste repositorio publico
+.context/
+.superpowers/
+.claude/
+
+# Lixo
+*.log
+*.har
+*.tmp
+*.zip
+node_modules/
+.DS_Store
+Thumbs.db

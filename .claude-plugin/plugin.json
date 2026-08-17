@@ -1,0 +1,9 @@
+{
+  "name": "padrao-aaa-universal",
+  "displayName": "Padrao AAA Universal",
+  "version": "0.1.0",
+  "description": "Manual de execucao portatil: marchas de rigor, oito lentes, inspecao cega com teto de rondas, e o que um pronto precisa provar.",
+  "author": { "name": "Padrao AAA Universal" },
+  "license": "MIT",
+  "keywords": ["qualidade", "processo", "revisao", "evidencia", "portugues"]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "padrao-aaa-universal",
+  "description": "Manual de execucao portatil para o Claude Code: marchas de rigor, oito lentes de inspecao e evidencia obrigatoria no fecho.",
+  "owner": { "name": "Padrao AAA Universal" },
+  "plugins": [
+    {
+      "name": "padrao-aaa-universal",
+      "source": "./",
+      "description": "Manual de execucao portatil: marchas de rigor, oito lentes, inspecao cega com teto de rondas, e o que um pronto precisa provar."
+    }
+  ]
+}
